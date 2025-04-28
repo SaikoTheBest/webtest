@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Hitman</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #ff0000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODA4MTFFMThDNTQ5NjQ5RTQ2QzEwRUIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODA4MTFFMThDNTQ5NjQ5RTQ2QzEwRUIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MDgxMUUxOEM1NDk2NDlFNDZDMTA5QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MDgxMUUxOEM1NDk2NDlFNDZDMTA5QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqQZ0QAAAA1JREFUeNpiYGBgYGAACDAAEGAAasgDR0AAAAAASUVORK5CYII=');
+        }
+        
+        header {
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        main {
+            min-height: calc(100vh - 458px);
+            padding-top: 3px;
+            margin-top: 0;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            padding: 25px 0;
+            text-align: center;
+            border-top: 1px solid #333;
+            margin-top: 0;
+        }
+        
+        h2 {
+            color: #ff0000;
+            text-shadow: 0 0 5px #ff0000;
+            margin: 0;
+            font-size: 2.1em;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        
+        h3 {
+            color: #ff0000;
+            text-shadow: 0 0 5px #ff0000;
+            margin: 0;
+            font-size: 1.6em;
+            letter-spacing: 2px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        p {
+            color: #ff0000;
+            font-size: 1.2em;
+            margin: 5px 0;
+            text-shadow: 0 0 3px #ff0000;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        
+        ::selection {
+            background: #ff0000;
+            color: #000;
+        }
+        
+        * {
+            cursor: default;
+            font-family: monospace;
+            font-size: 1.0em;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            border: 2px solid #ff0000;
+            padding: 20px 40px;
+            margin: 0 auto;
+            margin-top: 30px;
+            box-shadow: 0 0 10px #ff0000;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 1200px;
+            border-bottom: 1px solid #333;
+        }
+        
+        
+        .intro {
+            border: 2px solid #ff0000;
+            padding: 20px 40px;
+            margin: 30px auto;
+            box-shadow: 0 0 10px #ff0000;
+            width: 80%;
+            max-width: 1200px;
+        }
+        
+        .service-card {
+            background: #222;
+            border: 1px solid #333;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 3px;
+        }
+        
+        .warning {
+            color: #ff5555;
+            font-weight: bold;
+        }
+        
+        .contact {
+            border: 2px solid #ff0000;
+            padding: 20px 40px;
+            margin: 30px auto;
+            box-shadow: 0 0 10px #ff0000;
+            width: 80%;
+            max-width: 1200px;
+            background: #000;
+            border-left: 3px solid #ff0000;
+        }
+        
+        .hr {
+            width: 100%;
+            height: 25px;
+            background-color: #333;
+            border: none;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h2>Solve a Problem - Forever</h2>
+    </header>
+
+    <main>
+        <div class="service-card">
+            <p>We are SRS, a world-class team of elite operatives</p>
+            <p>specializing in discreet high-stake elimination</p>
+            <p>Comprising former military and CIA veterans</p>
+            <p>our unit boasts a flawless track record across six continents</p>
+            <p>delivering unparalleled results where others falter</p>
+            <p>Our clients-corporate magnates, shadowy fixers</p>
+            <p>and scorned elites—trust us to erase their obstacles</p>
+            <p>with surgical precision</p>
+            <p>Whether it's a clean accident, a bold public statement</p>
+            <p>or a seamless vanishing act</p>
+            <p>we craft each contract into a masterpiece of operational excellence</p>
+            <p>No target is too fortified, no job is too complex</p>
+            <p>Hire us, and your problem is already history</p>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="hr"></div>        
+            <div class="contact">
+            <h3>Contact Us</h3>
+                <p>Telegram: @RentAHitman</p>
+                <p class="warning">For security reasons, we only accept encrypted communications</p>
+            </div>
+    </footer>
+</body>
+</html>
